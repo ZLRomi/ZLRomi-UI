@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZLRomi-UI 宣传页：个人设计系统，零构建，明暗两套主题">
+  <meta name="theme-color" content="#4c46d1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12121a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <title>ZLRomi-UI — 个人设计系统</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .zui-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: var(--zui-space-4);
+      margin-top: var(--zui-space-8);
+    }
+    .zui-stat {
+      background: var(--zui-surface-1);
+      border: 1px solid var(--zui-outline-variant);
+      border-radius: var(--zui-radius-md);
+      padding: var(--zui-space-4);
+      text-align: center;
+    }
+    .zui-stat-num {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--zui-primary);
+    }
+    .zui-stat-label {
+      font-size: var(--zui-text-caption);
+      color: var(--zui-on-surface-variant);
+    }
+    .zui-steps {
+      display: grid;
+      gap: var(--zui-space-4);
+    }
+    .zui-step {
+      display: flex;
+      gap: var(--zui-space-4);
+      align-items: flex-start;
+      background: var(--zui-surface);
+      border: 1px solid var(--zui-outline-variant);
+      border-radius: var(--zui-radius-md);
+      padding: var(--zui-space-4) var(--zui-space-6);
+    }
+    .zui-step-no {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--zui-primary-container);
+      color: var(--zui-on-primary-container);
+      font-weight: 700;
+      font-size: var(--zui-text-small);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .zui-code {
+      display: block;
+      margin-top: var(--zui-space-2);
+      padding: var(--zui-space-4);
+      background: var(--zui-surface-3);
+      border-radius: var(--zui-radius-sm);
+      font-family: var(--zui-font-mono);
+      font-size: var(--zui-text-small);
+      overflow-x: auto;
+      white-space: pre;
+    }
+    .zui-cta {
+      text-align: center;
+      padding: var(--zui-space-16) 0;
+    }
+  </style>
+</head>
+<body id="top">
+  <header class="zui-header">
+    <div class="zui-container zui-header-inner">
+      <a href="#top" class="zui-brand">
+        <svg class="zui-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="28" height="28" rx="8" stroke="currentColor" stroke-width="3"/>
+          <path d="M10 11h12l-6 5 6 5H10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>ZLRomi-UI</span>
+      </a>
+      <nav class="zui-nav" aria-label="主导航">
+        <a href="#features" class="zui-nav-link">特性</a>
+        <a href="#usage" class="zui-nav-link">上手</a>
+        <a href="#preview" class="zui-nav-link">组件</a>
+        <a href="index.html" class="zui-nav-link">展示站</a>
+      </nav>
+      <div>
+        <button class="zui-icon-btn" id="themeToggle" aria-label="切换主题" title="切换主题">◐</button>
+        <button class="zui-icon-btn zui-menu-btn" id="menuToggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="zui-hero">
+      <div class="zui-container">
+        <span class="zui-eyebrow">v0.1 · MIT · 零构建</span>
+        <h1 class="zui-hero-title">ZLRomi-UI <span class="accent">设计系统</span></h1>
+        <p class="zui-hero-sub">
+          两个 CSS 文件、一个 JS 文件，没有构建步骤。
+          颜色、字体、形状、组件、动效，全部收敛为 CSS 变量。
+        </p>
+        <div class="zui-hero-actions">
+          <a href="index.html" class="zui-btn zui-btn-primary">看展示站</a>
+          <a href="https://github.com/ZLRomi/ZLRomi-UI" class="zui-btn zui-btn-outline">GitHub</a>
+        </div>
+        <div class="zui-stats zui-reveal">
+          <div class="zui-stat"><span class="zui-stat-num">16</span><span class="zui-stat-label">颜色 token</span></div>
+          <div class="zui-stat"><span class="zui-stat-num">2</span><span class="zui-stat-label">明暗主题</span></div>
+          <div class="zui-stat"><span class="zui-stat-num">7</span><span class="zui-stat-label">展示区块</span></div>
+          <div class="zui-stat"><span class="zui-stat-num">0</span><span class="zui-stat-label">构建步骤</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="features">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">01 / FEATURES</span>
+          <h2 class="zui-section-title">特性</h2>
+        </div>
+        <div class="zui-cards zui-reveal" style="--zui-reveal-delay: 80ms">
+          <article class="zui-card">
+            <span class="zui-chip zui-chip-primary">基石</span>
+            <h3 class="zui-card-title">变量即规范</h3>
+            <p class="zui-card-text">换主题只换一套 token，组件全部引用变量，不写死任何色值。</p>
+          </article>
+          <article class="zui-card">
+            <span class="zui-chip zui-chip-secondary">组件</span>
+            <h3 class="zui-card-title">开箱即用</h3>
+            <p class="zui-card-text">按钮、标签、卡片、表单、开关，类名即文档：zui-btn、zui-card、zui-chip。</p>
+          </article>
+          <article class="zui-card">
+            <span class="zui-chip zui-chip-tertiary">动效</span>
+            <h3 class="zui-card-title">收敛的动态</h3>
+            <p class="zui-card-text">三档时长、两条曲线，prefers-reduced-motion 下全部静止。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="usage">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">02 / USAGE</span>
+          <h2 class="zui-section-title">上手</h2>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-steps">
+            <div class="zui-step">
+              <span class="zui-step-no">1</span>
+              <div>
+                <strong>拿走三个文件</strong>
+                <code class="zui-code">css/tokens.css
+css/components.css
+js/main.js</code>
+              </div>
+            </div>
+            <div class="zui-step">
+              <span class="zui-step-no">2</span>
+              <div>
+                <strong>改种子色</strong>
+                <code class="zui-code">--zui-primary: #4c46d1;
+/* 明暗两套，各改一处 */</code>
+              </div>
+            </div>
+            <div class="zui-step">
+              <span class="zui-step-no">3</span>
+              <div>
+                <strong>用类名拼页面</strong>
+                <code class="zui-code">&lt;button class="zui-btn zui-btn-primary"&gt;确定&lt;/button&gt;</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="preview">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">03 / PREVIEW</span>
+          <h2 class="zui-section-title">组件一览</h2>
+          <p class="zui-section-desc">本页全部用 ZLRomi-UI 类名写成，右上角可切主题验证。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-btn-row">
+            <button class="zui-btn zui-btn-primary">主要按钮</button>
+            <button class="zui-btn zui-btn-outline">描边按钮</button>
+            <span class="zui-chip zui-chip-primary">已发布</span>
+            <span class="zui-chip zui-chip-outline">MIT</span>
+            <label class="zui-switch"><input type="checkbox" checked><span class="zui-switch-track"></span>跟随系统</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-cta">
+      <div class="zui-container zui-reveal">
+        <h2 class="zui-section-title" style="margin-bottom: 16px">拿去用</h2>
+        <div class="zui-hero-actions">
+          <a href="https://github.com/ZLRomi/ZLRomi-UI" class="zui-btn zui-btn-primary">GitHub 仓库</a>
+          <a href="index.html" class="zui-btn zui-btn-outline">完整展示站</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="zui-footer">
+    <div class="zui-container zui-footer-inner">
+      <span>ZLRomi-UI v0.1 · MIT</span>
+      <span>© <span id="year">2026</span> ZLRomi · <a href="index.html">展示站</a> · <a href="https://github.com/ZLRomi/ZLRomi-UI">GitHub</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

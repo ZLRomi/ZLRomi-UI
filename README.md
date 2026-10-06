@@ -1,5 +1,5 @@
 # ZLRomi-UI
-ZLRomi-UI设计风格：芒辰的个人 UI 设计系统。
+ZLRomi 的个人设计系统。
 
 ## 看什么
 

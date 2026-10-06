@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ZLRomi-UI — 芒辰的个人 UI 设计系统：设计基石、组件与动效展示">
+  <meta name="description" content="ZLRomi-UI：个人设计系统，颜色、字体、形状、组件、动效展示">
   <meta name="theme-color" content="#4c46d1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#12121a" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
@@ -41,14 +41,14 @@
     <section class="zui-hero">
       <div class="zui-container">
         <span class="zui-eyebrow">ZLRomi-UI · v0.1</span>
-        <h1 class="zui-hero-title">一套属于自己的 <span class="accent">UI 语言</span></h1>
+        <h1 class="zui-hero-title">ZLRomi-UI <span class="accent">设计系统</span></h1>
         <p class="zui-hero-sub">
-          霓紫种子色、4pt 间距、胶囊圆角、五档阴影。所有数值都是变量 ——
-          换主题只换一套 token，点击任意色卡即可复制色值。
+          颜色、字体、圆角、间距、阴影、组件、动效，共 7 个区块。
+          全部收敛为 CSS 变量，点色卡复制色值。
         </p>
         <div class="zui-hero-actions">
-          <a href="#color" class="zui-btn zui-btn-primary">浏览基石</a>
-          <a href="#buttons" class="zui-btn zui-btn-outline">看组件</a>
+          <a href="#color" class="zui-btn zui-btn-primary">颜色</a>
+          <a href="#buttons" class="zui-btn zui-btn-outline">按钮</a>
         </div>
       </div>
     </section>
@@ -58,7 +58,7 @@
         <div class="zui-section-head zui-reveal">
           <span class="zui-section-index">01 / TOKENS</span>
           <h2 class="zui-section-title">颜色</h2>
-          <p class="zui-section-desc">点击色卡复制 HEX。主色 <code>--zui-primary</code>，容器色用于大面积填充。</p>
+          <p class="zui-section-desc">16 个token，点色卡复制色值。</p>
         </div>
         <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
           <div class="zui-swatches" id="swatches"></div>
@@ -205,7 +205,7 @@
         <div class="zui-section-head zui-reveal">
           <span class="zui-section-index">07 / MOTION</span>
           <h2 class="zui-section-title">动效</h2>
-          <p class="zui-section-desc">悬停试试。减弱动态偏好下全部静止。</p>
+          <p class="zui-section-desc">悬停预览。<code>prefers-reduced-motion</code> 下静止。</p>
         </div>
         <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
           <div class="zui-motion-grid">
@@ -221,7 +221,7 @@
   <footer class="zui-footer">
     <div class="zui-container zui-footer-inner">
       <span>ZLRomi-UI v0.1 · MIT</span>
-      <span>© <span id="year">2026</span> 芒辰 · <a href="https://github.com/ZLRomi/ZLRomi-UI">GitHub</a></span>
+      <span>© <span id="year">2026</span> ZLRomi · <a href="https://github.com/ZLRomi/ZLRomi-UI">GitHub</a></span>
     </div>
   </footer>
 

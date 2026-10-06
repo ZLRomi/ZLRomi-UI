@@ -80,7 +80,7 @@ code {
 }
 
 .zui-brand:hover .zui-logo {
-  transform: rotate(-8deg) scale(1.06);
+  transform: scale(1.08);
 }
 
 .zui-nav {
@@ -198,6 +198,12 @@ body.is-loaded .zui-hero-actions {
 
 .zui-hero-title .accent {
   color: var(--zui-primary);
+}
+
+/* 签名细节：品牌选中色 */
+::selection {
+  background: var(--zui-primary);
+  color: var(--zui-on-primary);
 }
 
 .zui-hero-sub {
@@ -594,10 +600,11 @@ body.is-loaded .zui-hero-actions {
 .zui-switch-track::after {
   content: "";
   position: absolute;
-  top: 3px;
+  top: 50%;
   left: 3px;
   width: 20px;
   height: 20px;
+  margin-top: -10px;
   border-radius: 50%;
   background: var(--zui-on-surface-variant);
   transition: transform var(--zui-duration-base) var(--zui-ease-spring),
@@ -638,14 +645,20 @@ body.is-loaded .zui-hero-actions {
   cursor: pointer;
 }
 
-.zui-motion-base:hover {
+.zui-motion-base {
   transition: transform var(--zui-duration-base) var(--zui-ease-out);
+}
+
+.zui-motion-base:hover {
   transform: translateY(-6px);
 }
 
-.zui-motion-spring:hover {
+.zui-motion-spring {
   transition: transform var(--zui-duration-slow) var(--zui-ease-spring);
-  transform: scale(1.06) rotate(-2deg);
+}
+
+.zui-motion-spring:hover {
+  transform: scale(1.05);
 }
 
 .zui-motion-slow {

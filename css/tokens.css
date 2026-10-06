@@ -1,0 +1,141 @@
+/* ============================================================
+ * ZLRomi-UI v0.1 — 设计基石（Design Tokens）
+ * 命名空间：--zui-*
+ * 品牌种子色：霓紫 Indigo（区别于 NEO CN 的深绿）
+ * 明暗两套，用 [data-theme] 切换，JS 负责持久化
+ * ============================================================ */
+
+:root {
+  /* ---------- 品牌 ---------- */
+  --zui-brand-seed: #4c46d1;
+  --zui-brand-name: "ZLRomi-UI";
+
+  /* ---------- 主色（浅色） ---------- */
+  --zui-primary: #4c46d1;
+  --zui-on-primary: #ffffff;
+  --zui-primary-container: #e4e1ff;
+  --zui-on-primary-container: #1a154f;
+
+  --zui-secondary: #5b5b72;
+  --zui-on-secondary: #ffffff;
+  --zui-secondary-container: #e2e0f2;
+  --zui-on-secondary-container: #191926;
+
+  --zui-tertiary: #0e6b5c;
+  --zui-on-tertiary: #ffffff;
+  --zui-tertiary-container: #a8efdd;
+  --zui-on-tertiary-container: #002019;
+
+  --zui-error: #ba1a1a;
+  --zui-on-error: #ffffff;
+  --zui-error-container: #ffdad6;
+  --zui-on-error-container: #410002;
+
+  /* ---------- 表面（浅色） ---------- */
+  --zui-background: #faf9ff;
+  --zui-on-background: #1a1a24;
+  --zui-surface: #faf9ff;
+  --zui-on-surface: #1a1a24;
+  --zui-surface-variant: #e4e1ec;
+  --zui-on-surface-variant: #46464f;
+  --zui-surface-1: #f3f1fb;
+  --zui-surface-2: #edeaf6;
+  --zui-surface-3: #e7e3f1;
+  --zui-outline: #777680;
+  --zui-outline-variant: #c8c5d4;
+
+  /* ---------- 字体 ---------- */
+  --zui-font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    system-ui, -apple-system, "Segoe UI", sans-serif;
+  --zui-font-mono: "JetBrains Mono", "Cascadia Code", Consolas,
+    "Noto Sans Mono", monospace;
+
+  --zui-text-display: clamp(2.5rem, 5vw, 3.5rem);
+  --zui-text-h1: clamp(1.75rem, 3vw, 2.25rem);
+  --zui-text-h2: 1.4rem;
+  --zui-text-body: 1rem;
+  --zui-text-small: 0.875rem;
+  --zui-text-caption: 0.75rem;
+
+  /* ---------- 间距（4pt 基准） ---------- */
+  --zui-space-1: 4px;
+  --zui-space-2: 8px;
+  --zui-space-3: 12px;
+  --zui-space-4: 16px;
+  --zui-space-6: 24px;
+  --zui-space-8: 32px;
+  --zui-space-12: 48px;
+  --zui-space-16: 64px;
+  --zui-space-24: 96px;
+
+  /* ---------- 圆角 ---------- */
+  --zui-radius-xs: 4px;
+  --zui-radius-sm: 8px;
+  --zui-radius-md: 12px;
+  --zui-radius-lg: 16px;
+  --zui-radius-xl: 24px;
+  --zui-radius-full: 9999px;
+
+  /* ---------- 阴影（elevation） ---------- */
+  --zui-elevation-0: none;
+  --zui-elevation-1: 0 1px 2px rgb(26 21 79 / 0.3), 0 1px 3px 1px rgb(26 21 79 / 0.15);
+  --zui-elevation-2: 0 1px 2px rgb(26 21 79 / 0.3), 0 2px 6px 2px rgb(26 21 79 / 0.15);
+  --zui-elevation-3: 0 1px 3px rgb(26 21 79 / 0.3), 0 4px 8px 3px rgb(26 21 79 / 0.15);
+  --zui-elevation-4: 0 2px 3px rgb(26 21 79 / 0.3), 0 6px 10px 4px rgb(26 21 79 / 0.15);
+  --zui-elevation-5: 0 4px 4px rgb(26 21 79 / 0.3), 0 8px 12px 6px rgb(26 21 79 / 0.15);
+
+  /* ---------- 状态层 ---------- */
+  --zui-state-hover: rgb(26 21 79 / 0.08);
+  --zui-state-focus: rgb(26 21 79 / 0.12);
+  --zui-state-pressed: rgb(26 21 79 / 0.12);
+
+  /* ---------- 动效 ---------- */
+  --zui-duration-fast: 150ms;
+  --zui-duration-base: 250ms;
+  --zui-duration-slow: 400ms;
+  --zui-ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --zui-ease-spring: cubic-bezier(0.34, 1.4, 0.4, 1);
+
+  /* ---------- 布局 ---------- */
+  --zui-container-max: 1120px;
+  --zui-header-height: 64px;
+}
+
+/* ---------- 深色 ---------- */
+[data-theme="dark"] {
+  --zui-primary: #c6c2ff;
+  --zui-on-primary: #2b2670;
+  --zui-primary-container: #3e3891;
+  --zui-on-primary-container: #e4e1ff;
+
+  --zui-secondary: #c6c3d9;
+  --zui-on-secondary: #2e2e42;
+  --zui-secondary-container: #44445c;
+  --zui-on-secondary-container: #e2e0f2;
+
+  --zui-tertiary: #7cd8c3;
+  --zui-on-tertiary: #00382d;
+  --zui-tertiary-container: #005046;
+  --zui-on-tertiary-container: #a8efdd;
+
+  --zui-error: #ffb4ab;
+  --zui-on-error: #690005;
+  --zui-error-container: #93000a;
+  --zui-on-error-container: #ffdad6;
+
+  --zui-background: #12121a;
+  --zui-on-background: #e4e1ec;
+  --zui-surface: #12121a;
+  --zui-on-surface: #e4e1ec;
+  --zui-surface-variant: #46464f;
+  --zui-on-surface-variant: #c8c5d4;
+  --zui-surface-1: #1a1a24;
+  --zui-surface-2: #1e1e2a;
+  --zui-surface-3: #232330;
+  --zui-outline: #8f8e9e;
+  --zui-outline-variant: #46464f;
+
+  --zui-state-hover: rgb(255 255 255 / 0.08);
+  --zui-state-focus: rgb(255 255 255 / 0.12);
+  --zui-state-pressed: rgb(255 255 255 / 0.12);
+}

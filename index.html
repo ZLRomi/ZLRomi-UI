@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZLRomi-UI — 芒辰的个人 UI 设计系统：设计基石、组件与动效展示">
+  <meta name="theme-color" content="#4c46d1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#12121a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <title>ZLRomi-UI — 个人设计系统</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body id="top">
+  <header class="zui-header">
+    <div class="zui-container zui-header-inner">
+      <a href="#top" class="zui-brand">
+        <svg class="zui-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="2" width="28" height="28" rx="8" stroke="currentColor" stroke-width="3"/>
+          <path d="M10 11h12l-6 5 6 5H10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>ZLRomi-UI</span>
+      </a>
+      <nav class="zui-nav" aria-label="主导航">
+        <a href="#color" class="zui-nav-link">颜色</a>
+        <a href="#type" class="zui-nav-link">字体</a>
+        <a href="#shape" class="zui-nav-link">形状</a>
+        <a href="#buttons" class="zui-nav-link">按钮</a>
+        <a href="#cards" class="zui-nav-link">卡片</a>
+        <a href="#forms" class="zui-nav-link">表单</a>
+        <a href="#motion" class="zui-nav-link">动效</a>
+      </nav>
+      <div>
+        <button class="zui-icon-btn" id="themeToggle" aria-label="切换主题" title="切换主题">◐</button>
+        <button class="zui-icon-btn zui-menu-btn" id="menuToggle" aria-label="打开菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="zui-hero">
+      <div class="zui-container">
+        <span class="zui-eyebrow">ZLRomi-UI · v0.1</span>
+        <h1 class="zui-hero-title">一套属于自己的 <span class="accent">UI 语言</span></h1>
+        <p class="zui-hero-sub">
+          霓紫种子色、4pt 间距、胶囊圆角、五档阴影。所有数值都是变量 ——
+          换主题只换一套 token，点击任意色卡即可复制色值。
+        </p>
+        <div class="zui-hero-actions">
+          <a href="#color" class="zui-btn zui-btn-primary">浏览基石</a>
+          <a href="#buttons" class="zui-btn zui-btn-outline">看组件</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="color">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">01 / TOKENS</span>
+          <h2 class="zui-section-title">颜色</h2>
+          <p class="zui-section-desc">点击色卡复制 HEX。主色 <code>--zui-primary</code>，容器色用于大面积填充。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-swatches" id="swatches"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="type">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">02 / TOKENS</span>
+          <h2 class="zui-section-title">字体</h2>
+          <p class="zui-section-desc">系统黑体栈，标题紧字距，字号用 <code>clamp()</code> 流式缩放。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-type-row"><span class="zui-type-tag">--zui-text-display</span><span class="zui-type-display">记录 · 创造 · 分享</span></div>
+          <div class="zui-type-row"><span class="zui-type-tag">--zui-text-h1</span><span class="zui-type-h1">项目与博客入口</span></div>
+          <div class="zui-type-row"><span class="zui-type-tag">--zui-text-h2</span><span class="zui-type-h2">NEO Music 音乐播放器</span></div>
+          <div class="zui-type-row"><span class="zui-type-tag">--zui-text-body</span><span class="zui-type-body">这里聚合了我的项目和博客，包括桌面应用、操作系统与 Web 作品。</span></div>
+          <div class="zui-type-row"><span class="zui-type-tag">--zui-text-small</span><span class="zui-type-small">支持逐字歌词、无损音质与歌单导入。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="shape">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">03 / TOKENS</span>
+          <h2 class="zui-section-title">圆角 · 间距 · 阴影</h2>
+          <p class="zui-section-desc">圆角六档、间距 4pt 基准、阴影五档 elevation。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-shape-row" style="margin-bottom: 24px">
+            <div class="zui-shape-box" style="border-radius: var(--zui-radius-xs)">xs</div>
+            <div class="zui-shape-box" style="border-radius: var(--zui-radius-sm)">sm</div>
+            <div class="zui-shape-box" style="border-radius: var(--zui-radius-md)">md</div>
+            <div class="zui-shape-box" style="border-radius: var(--zui-radius-lg)">lg</div>
+            <div class="zui-shape-box" style="border-radius: var(--zui-radius-xl)">xl</div>
+          </div>
+          <div style="margin-bottom: 24px">
+            <div class="zui-space-bar"><span style="min-width: 70px">space-2</span><div class="zui-space-block" style="width: var(--zui-space-2)"></div><span>8px</span></div>
+            <div class="zui-space-bar"><span style="min-width: 70px">space-4</span><div class="zui-space-block" style="width: var(--zui-space-4)"></div><span>16px</span></div>
+            <div class="zui-space-bar"><span style="min-width: 70px">space-6</span><div class="zui-space-block" style="width: var(--zui-space-6)"></div><span>24px</span></div>
+            <div class="zui-space-bar"><span style="min-width: 70px">space-8</span><div class="zui-space-block" style="width: var(--zui-space-8)"></div><span>32px</span></div>
+          </div>
+          <div class="zui-elev-row">
+            <div class="zui-elev-box" style="box-shadow: var(--zui-elevation-1)">e1</div>
+            <div class="zui-elev-box" style="box-shadow: var(--zui-elevation-2)">e2</div>
+            <div class="zui-elev-box" style="box-shadow: var(--zui-elevation-3)">e3</div>
+            <div class="zui-elev-box" style="box-shadow: var(--zui-elevation-4)">e4</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="buttons">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">04 / COMPONENTS</span>
+          <h2 class="zui-section-title">按钮</h2>
+          <p class="zui-section-desc">全胶囊，按压缩放 0.97，描边款 hover 反白填充。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-btn-row">
+            <button class="zui-btn zui-btn-primary">主要按钮</button>
+            <button class="zui-btn zui-btn-secondary">次要按钮</button>
+            <button class="zui-btn zui-btn-outline">描边按钮</button>
+            <button class="zui-btn zui-btn-danger">危险按钮</button>
+          </div>
+          <div class="zui-btn-row">
+            <button class="zui-btn zui-btn-primary zui-btn-sm">小尺寸</button>
+            <button class="zui-btn zui-btn-primary" disabled>禁用</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="cards">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">05 / COMPONENTS</span>
+          <h2 class="zui-section-title">标签与卡片</h2>
+          <p class="zui-section-desc">卡片 hover 上浮 4px、阴影升至 e3。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-btn-row" style="margin-bottom: 24px">
+            <span class="zui-chip zui-chip-primary">已发布</span>
+            <span class="zui-chip zui-chip-secondary">开发中</span>
+            <span class="zui-chip zui-chip-tertiary">实验性</span>
+            <span class="zui-chip zui-chip-outline">归档</span>
+          </div>
+          <div class="zui-cards">
+            <article class="zui-card">
+              <span class="zui-chip zui-chip-primary">桌面应用</span>
+              <h3 class="zui-card-title">NEO ClassBoard</h3>
+              <p class="zui-card-text">教师桌面课表小组件，用 PySide6 + QML 写成。</p>
+            </article>
+            <article class="zui-card">
+              <span class="zui-chip zui-chip-secondary">Web OS</span>
+              <h3 class="zui-card-title">MXOS</h3>
+              <p class="zui-card-text">纯前端 Web 桌面操作系统，支持 .mx 应用安装包。</p>
+            </article>
+            <article class="zui-card">
+              <span class="zui-chip zui-chip-tertiary">音乐播放器</span>
+              <h3 class="zui-card-title">NEO Music</h3>
+              <p class="zui-card-text">双端音乐播放器，支持逐字歌词与无损音质。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="forms">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">06 / COMPONENTS</span>
+          <h2 class="zui-section-title">表单</h2>
+          <p class="zui-section-desc">输入框聚焦 3px 光环，开关用弹簧曲线弹到位。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-field">
+            <label class="zui-label" for="demoInput">项目名称</label>
+            <input class="zui-input" id="demoInput" type="text" placeholder="比如：NEO-OS">
+            <p class="zui-hint">字母、数字与连字符，2–32 位。</p>
+          </div>
+          <div class="zui-field">
+            <span class="zui-label">通知方式</span>
+            <div class="zui-check-row">
+              <label class="zui-check"><input type="checkbox" checked> 更新提醒</label>
+              <label class="zui-check"><input type="checkbox"> 每周精选</label>
+              <label class="zui-check"><input type="radio" name="ch" checked> 公开</label>
+              <label class="zui-check"><input type="radio" name="ch"> 私有</label>
+            </div>
+          </div>
+          <div class="zui-field">
+            <label class="zui-switch"><input type="checkbox" checked><span class="zui-switch-track"></span>深色模式跟随系统</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="zui-section" id="motion">
+      <div class="zui-container">
+        <div class="zui-section-head zui-reveal">
+          <span class="zui-section-index">07 / MOTION</span>
+          <h2 class="zui-section-title">动效</h2>
+          <p class="zui-section-desc">悬停试试。减弱动态偏好下全部静止。</p>
+        </div>
+        <div class="zui-demo zui-reveal" style="--zui-reveal-delay: 80ms">
+          <div class="zui-motion-grid">
+            <div class="zui-motion-box zui-motion-base">ease-out · 上浮</div>
+            <div class="zui-motion-box zui-motion-spring">spring · 回弹</div>
+            <div class="zui-motion-box zui-motion-slow">slow · 漫游</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="zui-footer">
+    <div class="zui-container zui-footer-inner">
+      <span>ZLRomi-UI v0.1 · MIT</span>
+      <span>© <span id="year">2026</span> 芒辰 · <a href="https://github.com/ZLRomi/ZLRomi-UI">GitHub</a></span>
+    </div>
+  </footer>
+
+  <div class="zui-toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

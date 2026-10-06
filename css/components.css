@@ -587,24 +587,24 @@ body.is-loaded .zui-hero-actions {
 }
 
 .zui-switch-track {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
   width: 48px;
   height: 28px;
+  padding: 0 3px;
   border-radius: var(--zui-radius-full);
   background: var(--zui-surface-variant);
   border: 1px solid var(--zui-outline);
-  position: relative;
   transition: background-color var(--zui-duration-base) var(--zui-ease-out),
     border-color var(--zui-duration-base) var(--zui-ease-out);
 }
 
 .zui-switch-track::after {
   content: "";
-  position: absolute;
-  top: 50%;
-  left: 3px;
   width: 20px;
   height: 20px;
-  margin-top: -10px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--zui-on-surface-variant);
   transition: transform var(--zui-duration-base) var(--zui-ease-spring),
